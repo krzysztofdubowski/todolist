@@ -9,11 +9,11 @@ use Symfony\Component\HttpFoundation\Request;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/s", name="homepage_default")
      */
-    public function indexAction(Request $request)
+    public function hindexAction(Request $request)
     {
-    return $this->render('todo/index.html.twig');
+      return $this->render('todo/index.html.twig');
     }
     
      

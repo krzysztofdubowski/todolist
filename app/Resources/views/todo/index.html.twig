@@ -9,26 +9,31 @@
       <th>To do</th>
       <th>Date</th>
       <th>Prority</th>
+      <th>Data WYkonania</th>
       <th>Action</th>
     </tr>
   </thead>
   <tbody>
-      {% for i in 1..110 %}
+     {% for todo in todos %}
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">{{todo.id}}</th>
+      <td>{{todo.Name}}</td>
+      <td>{{todo.Description}}</td>
+      <td>{{todo.Category}}</td>
+      <td>{{todo.DueDate|date('Y-m-d')}}</td>
+    
+      
       
       <td>
-          <a href="/todos/edit/1" class="btn btn-primary">Edit</a>
-          <a href="/todos/details/1" class="btn btn-success">Details</a>
-          <a href="/todos/delete/1" class="btn btn-danger">Delete</a>
+          <a href="/todos/edit/{{todo.id}}" class="btn btn-primary">Edit</a>
+          <a href="/todos/details/{{todo.id}}" class="btn btn-success">Details</a>
+          <a href="/todos/delete/{{todo.id}}" class="btn btn-danger">Delete</a>
                  
       </td>
      
     </tr>
-     {% endfor %}
+    {% endfor%}
+     
     </tbody>
 </table>
 {%endblock %}
