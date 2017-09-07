@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block title %}Todos{% endblock %}
+{% block body %}
+    <h2 class="page-header">Zadania do zrobienia</h2>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>To do</th>
+      <th>Date</th>
+      <th>Prority</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+      {% for i in 1..110 %}
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      
+      <td>
+          <a href="/todos/edit/1" class="btn btn-primary">Edit</a>
+          <a href="/todos/details/1" class="btn btn-success">Details</a>
+          <a href="/todos/delete/1" class="btn btn-danger">Delete</a>
+                 
+      </td>
+     
+    </tr>
+     {% endfor %}
+    </tbody>
+</table>
+{%endblock %}
+    
