@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>Kontakt:</h1>
+    <p> Nazwa {{ nazwa.GetNazwa }} </p>
+    <p> Adres {{ nazwa.Adres }} </p>
+    <p> Telefon {{ nazwa.GetTelefon }} </p>
+    <h1> URI: </h1>
+    <p>{{ uri }}</p>
+    <p>{{ request }}</p>
+
+{% endblock %}
+
+
